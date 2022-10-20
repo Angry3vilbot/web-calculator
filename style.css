@@ -1,0 +1,41 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+label{
+	grid-area: numberfield;
+}
+form{
+	grid-area: form;
+}
+div#numberContainer{
+	grid-area: div;
+	display: grid;
+	grid-template-rows: 50px 50px 50px 50px;
+	grid-template-columns: 50px 50px 50px;
+}
+div#operationContainer{
+	grid-area: oper;
+	display: grid;
+	grid-template-rows: 50px 50px 100px;
+	grid-template-columns: 50px;
+}
+div#operationContainerTwo{
+	grid-area: oper2;
+	display: grid;
+	grid-template-rows: 50px 50px 50px;
+	grid-template-columns: 50px;
+}
+div#calculatorContainer{
+	background-color: black;
+	color: white;
+	display: grid;
+	width: 260px;
+	grid-template-areas: 
+				'numberfield numberfield numberfield numberfield numberfield'
+				'form form form form form'
+				'div div div oper oper2'
+				'div div div oper oper2'
+				'div div div oper oper2'
+				'div div div oper oper2'
+}
