@@ -12,10 +12,10 @@ let operator = ''
 window.onload = textbar.value = null
 
 function add(numb1, numb2) {
-	return(Number(numb1)+Number(numb2))
+	return Number(numb1)+Number(numb2)
 }
 function subtract(numb1, numb2) {
-	return(parseInt(numb1)-parseInt(numb2))
+	return(parseFloat(numb1)-parseFloat(numb2))
 }
 function multiply(numb1, numb2) {
 	return(parseInt(numb1)*parseInt(numb2))
@@ -27,43 +27,27 @@ function exponent(numb1, numb2){
 	return(parseInt(numb1)**parseInt(numb2))
 }
 function operate(num1, operation, num2) {
-	// switch(operation){
-	// 	case "+":
-	// 		console.log(typeof(num1) + '  ' + typeof(num2));
-	// 		console.log(num1 + '  ' + num2);
-	// 		console.log(num1 + num2);
-	// 		console.log(operation + '1');
-	// 		textbar.setAttribute('value', add(num1, num2));
-	// 		console.log(typeof(num1) + '  ' + typeof(num2));
-	// 		break;
-	// 	case "'-'":
-	// 		console.log(num1 + '  ' + num2);
-	// 		console.log(operator + '2');
-	// 		textbar.setAttribute('value', subtract(num1, num2));
-	// 		break;
-	// 	case 'x':
-	// 	case '*':
-	// 		console.log(num1 + '  ' + num2);
-	// 		console.log(operator + '3');
-	// 		textbar.setAttribute('value', multiply(num1, num2));
-	// 		break;
-	// 	case '÷':
-	// 	case '/':
-	// 		console.log(num1 + '  ' + num2);
-	// 		console.log(operator + '4');		
-	// 		textbar.setAttribute('value', divide(num1, num2));
-	// 		break;
-	// 	case '^':
-	// 		console.log(num1 + '  ' + num2);			
-	// 		console.log(operator + '5');						
-	// 		textbar.setAttribute('value', exponent(num1, num2));
-	// 		break;
-	// 	default:
-	// 		console.log("EEEERRRRROOOOOORRRR");
-	// 		console.log(operator);
-	// }
-	if (operation === '+') {
-		return(textbar.setAttribute('value', add(number1, number2)));
+	switch(operation){
+		case '+':
+			textbar.setAttribute('value', add(num1, num2));
+			break
+		case '-':
+			textbar.setAttribute('value', subtract(num1, num2));
+			break
+		case 'x':
+		case '*':
+			textbar.setAttribute('value', multiply(num1, num2));
+			break
+		case '÷':
+		case '/':	
+			textbar.setAttribute('value', divide(num1, num2));
+			break
+		case '^':						
+			textbar.setAttribute('value', exponent(num1, num2));
+			break
+		default:
+			console.log("error");
+			console.log(operator);
 	}
 }
 function writeNumber(){
@@ -82,7 +66,6 @@ function clearOperator(){
 }
 function equalsOperator(){
 	number2 = Number(textbar.value)
-	console.log(operate(number1, operator, number2))
 	textbar.value = operate(number1, operator, number2)
 }
 numberContainer.forEach(element => element.addEventListener('click', writeNumber))
