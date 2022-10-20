@@ -7,6 +7,11 @@ label{
 }
 form{
 	grid-area: form;
+	color: white;
+}
+button{
+	color: white;
+	background-color: black;
 }
 div#numberContainer{
 	grid-area: div;
