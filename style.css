@@ -9,7 +9,9 @@ form{
 	grid-area: form;
 }
 input{
-	color: white;
+	color: black;
+	text-align: right;
+	background-color: rgb(160, 161, 129);
 }
 button{
 	color: white;
